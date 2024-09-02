@@ -8,3 +8,8 @@ git commit -m "files are added"
 git push origin main
 
 '''
+## How to run ?
+
+'''
+conda create --name visa python=latest version
+'''
