@@ -4,7 +4,7 @@ from datetime import datetime
 DATABASE_NAME = 'US_VISA'
 COLLECTION_NAME = 'visa_data'
 
-MONGO_URL_KEY = 'MONGODB_URL'
+MONGO_URL_KEY = os.getenv('MONGO_URL_KEY')
 
 PIPELINE_NAME= 'usvisa'
 

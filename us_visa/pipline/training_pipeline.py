@@ -7,7 +7,7 @@ from us_visa.execption import USvisaException
 
 class TrainPipeline:
     def __init__(self):
-        self.data_ingestion = DataIngestionConfig()
+        self.data_ingestion_config = DataIngestionConfig()
     def start_data_ingestion(self):
         try:
             logging.info("Entered the start_data_ingestion method of TrainPipeline class.")
@@ -19,3 +19,9 @@ class TrainPipeline:
             return data_ingestion_artifact
         except Exception as e:
             raise USvisaException(e,sys) from e            
+    def run_pipline(self):
+        try:
+            data_ingestion_artifact = self.start_data_ingestion()
+        except Exception as e:
+            raise USvisaException(e,sys)
+        
