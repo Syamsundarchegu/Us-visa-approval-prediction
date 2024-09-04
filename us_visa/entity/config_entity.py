@@ -21,4 +21,7 @@ class DataIngestionConfig:
     trian_test_split_ration: float = DATA_INGESTION_TRAIN_TEST_SPLIT_RATIO
     collection_name: str = COLLECTION_NAME
     
-    
+@dataclass
+class DataValidationConfig:
+    data_validation_dir:str = os.path.join(train_pipline_config.airtifact_dir, DATA_VALIDATION_DIR_NAME)
+    drift_report_file_path:str = os.path.join(data_validation_dir, DATA_VALIDATION_DRIFT_REPORT_DIR,DATA_VALIDATION_DRIFT_REPORT_FILE_NAME)
